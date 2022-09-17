@@ -11,7 +11,7 @@ nArchitecture Implementation Base
 - Global exception handling and logging
 - ElasticSearch
 - Security (Email, OTP, Hashing, Refresh token)
-- Dynamic repository implementation with paging, quries and joins
+- Dynamic repository implementation with paging, queries and joins
 - Event driven approach (RabbitMQ, Kafka)
 - Tests
 
