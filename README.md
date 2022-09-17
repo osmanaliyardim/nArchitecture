@@ -15,17 +15,17 @@ nArchitecture Implementation Base
 - Event driven approach (RabbitMQ, Kafka)
 - Tests
 
-* Core Layers:
-1 - Application
-2 - CrossCuttingConcerns
-3 - ElasticSearch
-4 - Mailing
-5 - Persistance
-6 - Security
+* Core Layers:  </br>
+1 - Application </br>
+2 - CrossCuttingConcerns  </br>
+3 - ElasticSearch  </br>
+4 - Mailing  </br>
+5 - Persistance  </br>
+6 - Security  </br>
 
-* Project Layers: 
-1 - Application (Business, Event Control)
-2 - Domain (Entities, Enums, Event Implementations)
-3 - Infrastructure (Adapters, 3rd Party Connections)
-4 - Persistance (DB implementations, Migrations, Repositories)
-5 - WebAPI (Controllers, Injections)
+* Project Layers:  </br>
+1 - Application (Business, Event Control)  </br>
+2 - Domain (Entities, Enums, Event Implementations)  </br>
+3 - Infrastructure (Adapters, 3rd Party Connections)  </br>
+4 - Persistance (DB implementations, Migrations, Repositories)  </br>
+5 - WebAPI (Controllers, Injections)  </br>
