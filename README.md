@@ -29,3 +29,26 @@ nArchitecture Implementation Base
 3 - Infrastructure (Adapters, 3rd Party Connections)  </br>
 4 - Persistance (DB implementations, Migrations, Repositories)  </br>
 5 - WebAPI (Controllers, Injections)  </br>
+
+# Dynamic Queries usage for API consumers
+{
+  "sort": [
+    {
+      "field": "name",
+      "dir": "asc"
+    }
+  ],
+  "filter": {
+    "field": "name",
+    "operator": "eq",
+    "value": "Series 4",    
+    "logic": "and",
+    "filters": [
+      {
+        "field": "dailyPrice",
+        "operator": "eq",
+        "value": "3300"
+      }    
+    ]
+  }
+}
