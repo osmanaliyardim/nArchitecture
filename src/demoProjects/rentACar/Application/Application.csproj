@@ -13,6 +13,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Features\Brands\Constants\" />
+    <Folder Include="Features\Models\" />
     <Folder Include="Services\" />
     <Folder Include="Services\Repositories\" />
   </ItemGroup>

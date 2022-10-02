@@ -17,9 +17,6 @@
     <None Remove="Enums\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Entities\" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\..\..\corePackages\Core.Persistence\Core.Persistence.csproj" />
   </ItemGroup>
 </Project>
