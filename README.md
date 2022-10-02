@@ -31,24 +31,24 @@ nArchitecture Implementation Base
 5 - WebAPI (Controllers, Injections)  </br>
 
 # Dynamic Queries usage for API consumers
-{
-  "sort": [
-    {
-      "field": "name",
-      "dir": "asc"
-    }
-  ],
-  "filter": {
-    "field": "name",
-    "operator": "eq",
-    "value": "Series 4",    
-    "logic": "and",
-    "filters": [
-      {
-        "field": "dailyPrice",
-        "operator": "eq",
-        "value": "3300"
-      }    
-    ]
-  }
-}
+{  </br>
+  "sort": [  </br>
+    {  </br>
+      "field": "name",  </br>
+      "dir": "asc"  </br>
+    }  </br>
+  ],  </br>
+  "filter": {  </br>
+    "field": "name",  </br>
+    "operator": "eq",  </br>
+    "value": "Series 4",     </br> 
+    "logic": "and",  </br>
+    "filters": [  </br>
+      {  </br>
+        "field": "dailyPrice",  </br>
+        "operator": "eq",  </br>
+        "value": "3300"  </br>
+      }     </br>
+    ] </br>
+  } </br>
+} </br>
