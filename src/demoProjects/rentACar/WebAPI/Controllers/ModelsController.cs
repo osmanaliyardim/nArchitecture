@@ -1,4 +1,6 @@
-﻿using Application.Features.Models.Models;
+﻿using Application.Features.Models.Commands.CreateModel;
+using Application.Features.Models.Dtos;
+using Application.Features.Models.Models;
 using Application.Features.Models.Queries.GetListModelByDynamic;
 using Application.Features.Models.Queries.GetListQuery;
 using Core.Application.Requests;
@@ -11,13 +13,13 @@ namespace WebAPI.Controllers
     [ApiController]
     public class ModelsController : BaseController
     {
-        //[HttpPost]
-        //public async Task<IActionResult> Add([FromBody] CreateModelCommand createModelCommand)
-        //{
-        //    CreatedModelDto result = await Mediator.Send(createModelCommand);
+        [HttpPost]
+        public async Task<IActionResult> Add([FromBody] CreateModelCommand createModelCommand)
+        {
+            CreatedModelDto result = await Mediator.Send(createModelCommand);
 
-        //    return Created("", result);
-        //}
+            return Created("", result);
+        }
 
         [HttpGet]
         public async Task<IActionResult> GetList([FromQuery] PageRequest pageRequest)

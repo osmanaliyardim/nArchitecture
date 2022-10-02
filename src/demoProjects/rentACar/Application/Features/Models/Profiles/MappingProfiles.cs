@@ -1,4 +1,5 @@
-﻿using Application.Features.Models.Dtos;
+﻿using Application.Features.Models.Commands.CreateModel;
+using Application.Features.Models.Dtos;
 using Application.Features.Models.Models;
 using AutoMapper;
 using Core.Persistence.Paging;
@@ -16,6 +17,9 @@ namespace Application.Features.Models.Profiles
                 .ReverseMap();
             
             CreateMap<IPaginate<Model>, ModelListModel>().ReverseMap();
+
+            CreateMap<Model, CreatedModelDto>().ReverseMap();
+            CreateMap<Model, CreateModelCommand>().ReverseMap();
         }
     }
 }
