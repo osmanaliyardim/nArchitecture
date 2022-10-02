@@ -1,12 +1,14 @@
-﻿using System;
-using Core.Persistence.Repositories;
+﻿using Core.Persistence.Repositories;
 
 namespace Domain.Entities
 {
     public class Brand : Entity
     {
         public string Name { get; set; }
-
+        
+        // A brand might have more than one model.
+        public virtual ICollection<Model> Models { get; set; }
+        
         public Brand()
         {
         }

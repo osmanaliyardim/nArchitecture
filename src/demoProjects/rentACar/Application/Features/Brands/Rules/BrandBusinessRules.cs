@@ -17,7 +17,7 @@ namespace Application.Features.Brands.Rules
         public async Task BrandNameCanNotBeDuplicatedWhenInserted(string name)
         {
             IPaginate<Brand> result = await _brandRepository.GetListAsync(b => b.Name == name);
-            if (result.Items.Any()) throw new BusinessException("Brand name exists.");
+            if (result.Items.Any()) throw new BusinessException("Brand name already exists.");
         }
 
         public void BrandShouldExistWhenRequested(Brand brand)

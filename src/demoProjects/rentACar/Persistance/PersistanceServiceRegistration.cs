@@ -1,5 +1,4 @@
-﻿using System;
-using Application.Services.Repositories;
+﻿using Application.Services.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -17,9 +16,9 @@ namespace Persistance
                                                      options.UseSqlServer(
                                                          configuration.GetConnectionString("RentACarConnectionString")));
             services.AddScoped<IBrandRepository, BrandRepository>();
+            services.AddScoped<IModelRepository, ModelRepository>();
 
             return services;
         }
     }
 }
-
