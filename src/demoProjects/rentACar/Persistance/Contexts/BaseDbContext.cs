@@ -1,4 +1,5 @@
-﻿using Domain.Entities;
+﻿using Core.Security.Entities;
+using Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
@@ -9,6 +10,10 @@ namespace Persistence.Contexts
         protected IConfiguration Configuration { get; set; }
         public DbSet<Brand> Brands { get; set; }
         public DbSet<Model> Models { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<OperationClaim> OperationClaims { get; set; }
+        public DbSet<UserOperationClaim> UserOperationClaims { get; set; }
+        public DbSet<RefreshToken> RefreshTokens { get; set; }
        
         public BaseDbContext(DbContextOptions dbContextOptions, IConfiguration configuration) : base(dbContextOptions)
         {
@@ -26,7 +31,7 @@ namespace Persistence.Contexts
         {
             // Generally, complex softwares include different namings in DB,
             // so that we have to indicate these rows here explicitly
-            // otherwise, your DB might have so much conflicts.
+            // otherwise, it might cause many conflicts in your DB.
             modelBuilder.Entity<Brand>(a =>
             {
                 a.ToTable("Brands").HasKey(k => k.Id);
