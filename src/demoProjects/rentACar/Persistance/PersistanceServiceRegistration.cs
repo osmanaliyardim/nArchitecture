@@ -17,6 +17,10 @@ namespace Persistance
                                                          configuration.GetConnectionString("RentACarConnectionString")));
             services.AddScoped<IBrandRepository, BrandRepository>();
             services.AddScoped<IModelRepository, ModelRepository>();
+            services.AddTransient<IUserRepository, UserRepository>();
+            services.AddTransient<IRefreshTokenRepository, RefreshTokenRepository>();
+            services.AddTransient<IOperationClaimRepository, OperationClaimRepository>();
+            services.AddTransient<IUserOperationClaimRepository, UserOperationClaimRepository>();
 
             return services;
         }
