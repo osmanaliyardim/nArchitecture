@@ -16,7 +16,7 @@ namespace Application.Features.Auths.Rules
         public async Task EmailCanNotBeDuplicatedWhenRegistered(string email)
         {
             User? user = await _userRepository.GetAsync(u => u.Email == email);
-            if (user is null) throw new BusinessException("This mail already exists!");
+            if (user is not null) throw new BusinessException("This mail already exists!");
         }
     }
 }
