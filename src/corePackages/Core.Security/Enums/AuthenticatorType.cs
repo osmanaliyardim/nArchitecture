@@ -2,7 +2,7 @@
 
 public enum AuthenticatorType
 {
-    None = 0,
-    Email = 1,
-    Otp = 2
+    None = 0, // Simple email & password authentication
+    Email = 1, // From any email platform authentication
+    Otp = 2 // From various software based 2-factor authentication
 }
